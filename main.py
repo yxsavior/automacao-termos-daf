@@ -135,35 +135,31 @@ def main():
     parser.add_argument(
         "--tipo",
         "-t",
-        choices=["conf_imagem", "voluntariado", "todos"],
+        choices=["conf_imagem", "voluntariado"],
         default=None,
-        help="Tipo de fluxo: 'conf_imagem', 'voluntariado' ou 'todos'.",
+        help="Tipo de fluxo: 'conf_imagem' (Entrada/Trainees) ou 'voluntariado' (Efetivação).",
     )
 
     args = parser.parse_args()
     tipo = args.tipo
 
     if not tipo:
-        print("Escolha os termos que deseja gerar:")
-        print("  1 - Confidencialidade e Imagem")
-        print("  2 - Voluntariado")
-        print("  3 - Todos")
-        escolha = input("Digite a opção (1, 2 ou 3): ").strip()
+        print("Escolha o momento da geração dos termos:")
+        print("  1 - Entrada de Trainees (Confidencialidade + Imagem)")
+        print("  2 - Efetivação de Membros (Voluntariado)")
+        escolha = input("Digite a opção (1 ou 2): ").strip()
 
         if escolha == "1":
             tipo = "conf_imagem"
         elif escolha == "2":
             tipo = "voluntariado"
-        elif escolha == "3":
-            tipo = "todos"
         else:
             print("Opção inválida.")
             return
 
-    if tipo in ("conf_imagem", "todos"):
+    if tipo == "conf_imagem":
         fluxo_conf_imagem()
-
-    if tipo in ("voluntariado", "todos"):
+    elif tipo == "voluntariado":
         fluxo_voluntariado()
 
 

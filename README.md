@@ -132,9 +132,4 @@ Você pode rodar diretamente o fluxo pretendido passando o parâmetro `--tipo` (
   python main.py --tipo voluntariado
   ```
 
-- **Executar todos os fluxos:**
-  ```bash
-  python main.py --tipo todos
-  ```
-
 Os PDFs finais compilados e organizados estarão disponíveis dentro do diretório `termos/final/`.
