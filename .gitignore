@@ -1,0 +1,19 @@
+# Ambiente e Dependências
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Segredos e Credenciais
+.env
+
+# Dados Pessoais de Entrada
+dados.csv
+substituicoes.json
+
+# Saídas do Pipeline
+termos/
+*.pdf
+*.zip
+*.log
+*.aux
