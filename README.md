@@ -85,7 +85,7 @@ docker pull blang/latex:ubuntu
 Crie um arquivo `.env` na raiz do projeto:
 
 ```ini
-URL_BASE=https://sistema-de-termos.exemplo.com
+URL_BASE=https://sistema.exemplo.com
 LOGIN_USUARIO=seu_usuario
 LOGIN_SENHA=sua_senha
 ```
@@ -138,18 +138,3 @@ Você pode rodar diretamente o fluxo pretendido passando o parâmetro `--tipo` (
   ```
 
 Os PDFs finais compilados e organizados estarão disponíveis dentro do diretório `termos/final/`.
-
----
-
-## 🔒 Segurança e Boas Práticas
-
-Certifique-se de que o seu `.gitignore` contenha:
-
-```gitignore
-.env
-dados.csv
-substituicoes.json
-termos/
-.venv/
-__pycache__/
-```
